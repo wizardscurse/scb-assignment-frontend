@@ -1,0 +1,78 @@
+@import '../../styles/index.scss';
+
+.root {
+  margin-top: 60px;
+
+  * {
+    box-sizing: border-box;
+  }
+
+  .container {
+    margin: 0 -5px;
+  }
+
+  .container:after {
+    content: '';
+    display: table;
+    clear: both;
+  }
+
+  .card {
+    float: left;
+    width: 33.33%;
+    padding: 15px;
+
+    @media (max-width: $screen-lg-max) {
+      width: 50%;
+    }
+
+    @media (max-width: $screen-sm-max) {
+      width: 100%;
+    }
+  }
+
+  .card-container {
+    display: grid;
+    grid-template-columns: 40% 30% 30%;
+  }
+
+  .detail-container {
+    > div {
+      padding: 0 15px;
+      display: flex;
+      align-items: center;
+
+      p {
+        @include typo-paragraph-1();
+        margin-left: 10px;
+      }
+    }
+
+    > div:last-child {
+      margin-top: -22px;
+    }
+  }
+
+  .button-container {
+    display: flex;
+    align-items: center;
+    > button {
+      width: 100%;
+      margin: 15px 15px 15px 0;
+    }
+  }
+}
+
+.create-button {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  padding: 10px;
+  border-radius: 50%;
+  display: inline-block;
+  color: $white-high-color;
+  background: $pink-high-color;
+  cursor: pointer;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+}

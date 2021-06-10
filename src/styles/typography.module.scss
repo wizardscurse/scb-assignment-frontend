@@ -1,0 +1,50 @@
+@mixin typo-heading-1($color: $black-high-color) {
+  color: $color;
+  font-weight: normal;
+  margin: 0px;
+  padding: 0px;
+  font-size: 2rem;
+  line-height: 1.1;
+}
+
+@mixin typo-heading-3($color: $black-high-color) {
+  color: $color;
+  font-weight: normal;
+  font-size: 1.63rem;
+  line-height: 1.1;
+}
+
+@mixin typo-heading-4($color: $black-high-color) {
+  color: $color;
+  font-weight: normal;
+  font-size: 1.33rem;
+  line-height: 1.1;
+}
+
+@mixin typo-heading-5($color: $black-high-color) {
+  color: $color;
+  font-weight: normal;
+  font-size: 1.2rem;
+  line-height: 1.1;
+}
+
+@mixin typo-paragraph-1($color: $black-high-color) {
+  color: $color;
+  font-size: 1.135rem;
+  font-weight: normal;
+  line-height: 1;
+}
+
+@mixin typo-paragraph-2($color: $black-high-color) {
+  color: $color;
+  font-size: 1rem;
+  font-weight: normal;
+  line-height: 1;
+}
+
+@mixin typo-caption($color: $black-high-color) {
+  color: $color;
+  font-size: 0.9rem;
+  font-weight: normal;
+  line-height: 1;
+}

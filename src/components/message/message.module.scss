@@ -1,0 +1,90 @@
+@import '../../styles/index.scss';
+
+.root {
+  @include typo-heading-4($white-high-color);
+  padding: 15px;
+  border-radius: 0.5rem;
+  position: fixed;
+  left: 50%;
+  transform: translate(-50%, 25%);
+  z-index: 100;
+
+  visibility: visible;
+  -webkit-animation: fadein 0.5s;
+  animation: fadein 0.5s;
+}
+
+.closebtn {
+  margin-left: 15px;
+  color: $white-high-color;
+  font-weight: bold;
+  float: right;
+  font-size: 22px;
+  line-height: 20px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.closebtn:hover {
+  color: $black-low-color;
+}
+
+.root_errorType {
+  background-color: $red-high-color;
+}
+
+.root_informationType {
+  background-color: $green-high-color;
+}
+
+.root_waringType {
+  background-color: $yellow-high-color;
+}
+
+.hidden {
+  display: none;
+}
+
+@-webkit-keyframes fadein {
+  from {
+    bottom: 0;
+    opacity: 0;
+  }
+  to {
+    bottom: 60px;
+    opacity: 1;
+  }
+}
+
+@keyframes fadein {
+  from {
+    top: 0;
+    opacity: 0;
+  }
+  to {
+    top: 60px;
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes fadeout {
+  from {
+    top: 60px;
+    opacity: 1;
+  }
+  to {
+    top: 0;
+    opacity: 0;
+  }
+}
+
+@keyframes fadeout {
+  from {
+    top: 60px;
+    opacity: 1;
+  }
+  to {
+    top: 0;
+    opacity: 0;
+  }
+}

@@ -1,0 +1,40 @@
+@import '../../../styles/index.scss';
+
+.root {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.label {
+  padding: 5px;
+  position: relative;
+  padding-left: 20px;
+}
+.label .input {
+  display: none;
+}
+.label .span {
+  @include typo-heading-3();
+  border: 1px solid $border-color-high;
+  width: 28px;
+  height: 28px;
+  position: absolute;
+  overflow: hidden;
+  line-height: 1;
+  text-align: center;
+  border-radius: 100%;
+  left: 0;
+  top: 50%;
+  margin-top: -7.5px;
+  cursor: pointer;
+}
+.input:checked + .span {
+  background: $pink-high-color;
+  border-color: $pink-high-color;
+  color: $white-high-color;
+}
+
+.error {
+  outline: 3px solid $red-high-color;
+}

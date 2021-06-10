@@ -1,0 +1,41 @@
+@import '../../../styles/index.scss';
+
+.root {
+  position: relative;
+
+  .radio-container {
+    display: grid;
+  }
+
+  .grid-template-1 {
+    grid-template-columns: auto;
+  }
+  .grid-template-2 {
+    grid-template-columns: auto auto;
+  }
+  .grid-template-3 {
+    grid-template-columns: auto auto auto;
+  }
+  .grid-template-4 {
+    grid-template-columns: auto auto auto auto;
+  }
+
+  .label {
+    @include typo-heading-4();
+    display: block;
+    padding: 5px;
+    position: relative;
+  }
+
+  span {
+    @include typo-heading-4();
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin-right: 15px;
+  }
+
+  .input_error {
+    color: $red-high-color;
+  }
+}

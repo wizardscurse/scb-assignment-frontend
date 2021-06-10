@@ -1,0 +1,50 @@
+@import '../../styles/index.scss';
+
+.root {
+  position: relative;
+  background-color: $background-color;
+  width: 100%;
+  height: 100%;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+  border-radius: 1rem;
+  overflow: hidden;
+
+  img {
+    width: 100%;
+    overflow: hidden;
+  }
+
+  .title {
+    @include typo-heading-3();
+    padding: 10px 15px;
+    font-weight: bold;
+    border-bottom: 1px solid $border-color-high;
+  }
+
+  .badge {
+    @include typo-paragraph-1($white-high-color);
+    position: absolute;
+    top: 18px;
+    right: 0px;
+    padding: 5px 10px 5px 10px;
+    border-bottom-left-radius: 0.4rem;
+    border-top-left-radius: 0.4rem;
+  }
+
+  .available {
+    background: $green-low-color;
+  }
+
+  .joined {
+    background: $blue-high-color;
+  }
+
+  .full {
+    background: $yellow-high-color;
+  }
+}
+
+.root:hover {
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}

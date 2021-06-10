@@ -1,0 +1,122 @@
+@import '../../../styles/index.scss';
+
+.root {
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: $background-color;
+  padding-top: 60px;
+
+  .modal {
+    background: $pink-high-color;
+    margin: 5% auto 15% auto;
+    width: 50%;
+    border-radius: 2rem;
+
+    @media (max-width: $screen-lg-max) {
+      width: 65%;
+    }
+
+    @media (max-width: $screen-sm-max) {
+      width: 80%;
+    }
+  }
+
+  .field,
+  .image-container,
+  .button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .field {
+    padding: 0 40px 40px 40px;
+  }
+
+  .button {
+    padding: 10px 40px 10px 40px;
+  }
+
+  .button:last-child {
+    padding-bottom: 30px;
+
+    > button {
+      border-color: $white-high-color;
+    }
+  }
+
+  .logo {
+    margin-top: 40px;
+    margin-bottom: 40px;
+    height: 300px;
+  }
+
+  .input {
+    width: 60%;
+    position: relative;
+    line-height: 1.4;
+    font-family: 'Inter', sans-serif;
+    font-size: calc(0.8rem + 0.4vw);
+    color: $white-high-color;
+    background: $pink-high-color;
+    font-weight: 300;
+    line-height: 1.4;
+
+    @media (max-width: $screen-lg-max) {
+      width: 100%;
+    }
+
+    &_label {
+      position: absolute;
+      left: 0;
+      top: 0;
+      padding: calc(var(--size-bezel) * 0.75)
+        calc(var(--size-bezel) * 0.5);
+      margin: calc(var(--size-bezel) * 0.75 + 3px)
+        calc(var(--size-bezel) * 0.5);
+      background: $pink-high-color;
+      white-space: nowrap;
+      transform: translate(0, 0);
+      transform-origin: 0 0;
+      background: $pink-high-color;
+      transition: transform 120ms ease-in;
+      font-weight: bold;
+      line-height: 1.2;
+      transform: translate(0.25rem, -65%) scale(0.8);
+      color: var(--color-accent);
+    }
+    &_field {
+      box-sizing: border-box;
+      display: block;
+      width: 100%;
+      border: 3px solid $white-high-color;
+      padding: calc(0.5rem * 1.5) 0.5rem;
+      color: $white-high-color;
+      background: transparent;
+      border-radius: 2rem;
+
+      &:focus,
+      &:not(:placeholder-shown) {
+        & + .input_label {
+          transform: translate(1rem, -45%) scale(0.8);
+          color: $white-high-color;
+        }
+      }
+    }
+  }
+  input:focus {
+    outline: none;
+  }
+
+  input:-webkit-autofill,
+  input:-webkit-autofill:hover,
+  input:-webkit-autofill:focus,
+  input:-webkit-autofill:active {
+    -webkit-box-shadow: 0 0 0 30px $pink-high-color inset !important;
+  }
+}

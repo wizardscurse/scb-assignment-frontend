@@ -1,0 +1,11 @@
+@font-face {
+  font-family: 'thaisans_neueregular';
+  src: local('thaisans_neueregular'),
+    url(./fonts//ThaiSansNeue-Regular.otf)
+      format('opentype');
+}
+
+body {
+  background: #ccc;
+  min-height: 100vh;
+}

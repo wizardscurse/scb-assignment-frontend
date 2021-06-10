@@ -1,0 +1,38 @@
+@import '../../styles/index.scss';
+
+button {
+  @include typo-paragraph-1($white-high-color);
+  width: 60%;
+  position: relative;
+  border-radius: 2rem;
+  padding: 10px;
+  text-align: center;
+  transition-duration: 0.4s;
+  text-decoration: none;
+  overflow: hidden;
+  cursor: pointer;
+  border: 2px solid $white-high-color;
+
+  @media (max-width: $screen-lg-max) {
+    width: 100%;
+  }
+}
+
+.root_highPriority {
+  background-color: $green-lower-color;
+  border-color: $green-lower-color;
+}
+
+.root_normalPriority {
+  background-color: $pink-high-color;
+  border-color: transparent;
+}
+
+.root_lowPriority {
+  background-color: $black-high-color;
+  border-color: $black-high-color;
+}
+
+.disable {
+  opacity: 0.5;
+}
